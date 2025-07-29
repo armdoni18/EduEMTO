@@ -41,9 +41,9 @@ This MATLAB code performs 2D topology optimization of a magnetic actuator using 
     
     **modelname = 'Magnetic_Actuator_xxxxxx';**
     
-    Choose between the two mesh options:
-       - `Magnetic_Actuator_Fine_Mesh.msh`           → full model  
-       - `Magnetic_Actuator_Fine_Mesh_Symmetry.msh`  → half model (symmetry)
+    - Choose between the two mesh options:
+        - `Magnetic_Actuator_Fine_Mesh.msh`           → full model
+        - `Magnetic_Actuator_Fine_Mesh_Symmetry.msh`  → half model (symmetry)
     
     Example — to use the symmetry-based model:
     
