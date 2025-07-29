@@ -51,15 +51,15 @@ This MATLAB code performs 2D topology optimization of a magnetic actuator using 
 
 2. **Adjust Volume Parameters (if needed):**
 
-    If using the full model, use:
-      inputs.VT  = 97500;
-      inputs.VND = 72150;
-      inputs.VDD = 25350;
+    - If using the full model, use:
+      - inputs.VT  = 97500;
+      - inputs.VND = 72150;
+      - inputs.VDD = 25350;
     
-    If using the half model, divide all three values by 2:
-      inputs.VT  = 48750;
-      inputs.VND = 36075;
-      inputs.VDD = 12675;
+    - If using the half model, divide all three values by 2:
+      - inputs.VT  = 48750;
+      - inputs.VND = 36075;
+      - inputs.VDD = 12675;
 
 3. **Create Output Folder:**
 
