@@ -39,7 +39,7 @@ This MATLAB code performs 2D topology optimization of a magnetic actuator using 
 
     In the **Main_node_EM_TO.m** file, locate and set the mesh filename in the following line:
     ```
-    **modelname = 'Magnetic_Actuator_xxxxxx';**
+    modelname = 'Magnetic_Actuator_xxxxxx';
     ```
     
     - Choose between the two mesh options:
@@ -47,16 +47,18 @@ This MATLAB code performs 2D topology optimization of a magnetic actuator using 
         - `Magnetic_Actuator_Fine_Mesh_Symmetry.msh`  → half model (symmetry)
     
     Example — to use the symmetry-based model:
-    
-    **modelname = 'Magnetic_Actuator_Fine_Mesh_Symmetry';**
+    ```
+    modelname = 'Magnetic_Actuator_Fine_Mesh_Symmetry';
+    ```
 
 2. **Adjust Volume Parameters (if needed):**
 
     - If using the full model, use:
-      - inputs.VT  = 97500;
-      - inputs.VND = 72150;
-      - inputs.VDD = 25350;
-    
+```
+      inputs.VT  = 97500;
+      inputs.VND = 72150;
+      inputs.VDD = 25350;
+```    
     - If using the half model, divide all three values by 2:
       - inputs.VT  = 48750;
       - inputs.VND = 36075;
