@@ -72,6 +72,6 @@ This MATLAB code performs 2D topology optimization of a magnetic actuator using 
 
     Launch MATLAB, navigate to the project folder, and run:
     
-    >> Main_node_EM_TO
+    - Main_node_EM_TO.m
     
     The optimization will begin. Plots will be automatically saved in **Figures/** at each iteration.
