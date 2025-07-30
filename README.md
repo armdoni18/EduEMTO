@@ -54,15 +54,18 @@ This MATLAB code performs 2D topology optimization of a magnetic actuator using 
 2. **Adjust Volume Parameters (if needed):**
 
     - If using the full model, use:
-```matlab
-inputs.VT  = 97500;
-inputs.VND = 72150;
-inputs.VDD = 25350;
+    ```
+    inputs.VT  = 97500;
+    inputs.VND = 72150;
+    inputs.VDD = 25350;
+    ```
+    
     - If using the half model, divide all three values by 2:
-```matlab
-      inputs.VT  = 48750;
-      inputs.VND = 36075;
-      inputs.VDD = 12675;
+    ```
+    inputs.VT  = 48750;
+    inputs.VND = 36075;
+    inputs.VDD = 12675;
+    ```
   
 3. **Update Boundary Conditions**
 In the file **Func3_Pre_FEM_init.m**, the boundary conditions are set manually based on the domain size. You must adjust them based on whether you are using the full or symmetry mesh. If using the symmetry model, you must update this section to exclude the right boundary from Dirichlet conditions:
