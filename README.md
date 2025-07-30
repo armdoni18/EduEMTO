@@ -38,8 +38,9 @@ This MATLAB code performs 2D topology optimization of a magnetic actuator using 
 1. **Set the Mesh File in the Code:**
 
     In the **Main_node_EM_TO.m** file, locate and set the mesh filename in the following line:
-    
+    ```
     **modelname = 'Magnetic_Actuator_xxxxxx';**
+    ```
     
     - Choose between the two mesh options:
         - `Magnetic_Actuator_Fine_Mesh.msh`           → full model
