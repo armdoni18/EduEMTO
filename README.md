@@ -65,6 +65,7 @@ This MATLAB code performs 2D topology optimization of a magnetic actuator using 
 In the file **Func3_Pre_FEM_init.m**, the boundary conditions are set manually based on the domain size. You must adjust them based on whether you are using the full or symmetry mesh. If using the symmetry model, you must update this section to exclude the right boundary from Dirichlet conditions:
 
     - For the **full model** (Magnetic_Actuator_Fine_Mesh.msh), use:
+    ```
         left_ind    = find(abs(fem.X(:,1)-(+0))<1e-6);
         right_ind   = find(abs(fem.X(:,1)-(+390))<1e-6);
         top_ind     = find(abs(fem.X(:,2)-(+0))<1e-6);
