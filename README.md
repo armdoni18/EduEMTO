@@ -19,16 +19,16 @@ This MATLAB code performs 2D topology optimization of a magnetic actuator using 
 
 ## Folder Structure
 
-- **Main_node_EM_TO.m**                  % Main optimization script
-- **Magnetic_Actuator_Fine_Mesh.msh**    % Gmsh mesh input (v4.1)
-- **Func2_pre_msh_2D.m**                 % Mesh parser for Gmsh output
-- **Func3_Pre_FEM_init.m**               % FEM system initialization
-- **Func4_Pre_Opt_init.m**               % Optimization parameters and filter setup
-- **Func5_VecPot_A.m**                   % FEM solver for vector potential A_z
-- **Func6_MagFlux_BxBy.m**               % Compute magnetic flux density Bx, By, and |B|
-- **Func7_MST_Force.m**                  % Compute magnetic force (Fy) using MST
-- **Func8_Sens.m**                       % Sensitivity analysis (Adjoint + Heaviside projection)
-- **Func9_Opt_Plot.m**                   % Plotting and result visualization
+- 'Main_node_EM_TO.m'                  % Main optimization script
+- Magnetic_Actuator_Fine_Mesh.msh    % Gmsh mesh input (v4.1)
+- Func2_pre_msh_2D.m                 % Mesh parser for Gmsh output
+- Func3_Pre_FEM_init.m               % FEM system initialization
+- Func4_Pre_Opt_init.m               % Optimization parameters and filter setup
+- Func5_VecPot_A.m                   % FEM solver for vector potential A_z
+- Func6_MagFlux_BxBy.m               % Compute magnetic flux density Bx, By, and |B|
+- Func7_MST_Force.m                  % Compute magnetic force (Fy) using MST
+- Func8_Sens.m                       % Sensitivity analysis (Adjoint + Heaviside projection)
+- Func9_Opt_Plot.m                   % Plotting and result visualization
 
 - `Main_node_EM_TO.m`             % Main optimization script
 - `Magnetic_Actuator_Fine_Mesh.msh` % Gmsh mesh input (v4.1)
