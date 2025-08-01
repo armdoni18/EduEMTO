@@ -29,7 +29,7 @@ This MATLAB code performs 2D topology optimization of a magnetic actuator using 
 - `Func7_MST_Force.m`                  % Compute magnetic force (Fy) using MST
 - `Func8_Sens.m`                       % Sensitivity analysis (Adjoint + Heaviside projection)
 - `Func9_Opt_Plot.m`                   % Plotting and result visualization
----
+
 
 | File Name                        | Description                                        |
 |----------------------------------|----------------------------------------------------|
@@ -44,7 +44,7 @@ This MATLAB code performs 2D topology optimization of a magnetic actuator using 
 | `Func8_Sens.m`                  | Sensitivity analysis (Adjoint + Heaviside projection) |
 | `Func9_Opt_Plot.m`              | Plotting and result visualization                  |
 
-
+---
 ## How to Run
 
 1. **Set the Mesh File in the Code:**
