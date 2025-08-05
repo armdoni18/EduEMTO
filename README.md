@@ -82,8 +82,7 @@ In the file **Func3_Pre_FEM_init.m**, the boundary conditions are set manually b
         ```
 
     - For the **symmetry model** (Magnetic_Actuator_Fine_Mesh_Symmetry.msh) use:
-      - Treat the right boundary as a Neumann boundary with natural condition ∂𝐴𝑧/∂𝑛 = 𝑔 = 0
-      - Exclude the right boundary from Dirichlet BCs:
+      - Treat the right boundary as a Neumann boundary with natural condition ∂𝐴𝑧/∂𝑛 = 𝑔 = 0, by exclude the right boundary from Dirichlet BCs:
         ```     
         left_ind    = find(abs(fem.X(:,1)-(+0))<1e-6);
         % right_ind   = find(abs(fem.X(:,1)-(+390))<1e-6); % Not used in symmetry
