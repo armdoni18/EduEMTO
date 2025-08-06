@@ -7,21 +7,21 @@ modelname = 'Magnetic_Actuator_Fine_Mesh';
     inputs.VT       = 97500;        % Total volume full model
     inputs.VND      = 72150;        % Non-design domain volume (Fixed) full model  
     inputs.VDD      = 25350;        % Design domain volume full model
-    inputs.volfrac  = 0.25;         % Targeted volume fraction
+    inputs.volfrac  = 0.35;         % Targeted volume fraction
     inputs.u0       = 4*pi*1e-7;    % Vacuum permeability
     inputs.mprop_D  = 1500;         % Reluctivity material in design domain (iron)
     inputs.mprop_A  = 1;            % Reluctivity of air
     inputs.mprop_C1 = 1;            % Reluctivity of coil 1 (+J)
     inputs.mprop_C2 = 1;            % Reluctivity of coil 2 (-J)
     inputs.mprop_ND = 1500;         % Reluctivity of C-core (iron)
-    inputs.J_am2    = 1.5e2;        % Current density [A/m^2]
+    inputs.J_am2    = 1.5e3;        % Current density [A/m^2]
     inputs.conv     = 0.00008;      % Convergence criteria
     inputs.bt_init  = 0.1;          % Initial beta value for Heaviside projection
     inputs.bt_ic    = 1.5;          % Increment factor beta 
     inputs.bt_ns    = 4;            % Number of step for beta
     inputs.bt_fn    = 10;           % Final value for beta
     inputs.MMA_c    = 1000;         % MMA constant parameter
-    inputs.rmin     = 2.0;            % Helmholtz filter radius              
+    inputs.rmin     = 2;            % Helmholtz filter radius                   
     
     [mesh]   = Func2_pre_msh_2D(modelname);             % Load mesh information
 
@@ -87,7 +87,7 @@ modelname = 'Magnetic_Actuator_Fine_Mesh';
  %%   
     saveas(figure(1), 'Figures/Obj_Final.png');                                                 % Save the final objective function plot
     saveas(figure(2), 'Figures/Vol_Final.png');                                                 % Save the final volume constraint plot
-% %% Post-processing
-%     Func10_PostProcessold(fem,opt,inputs); 
-%     fprintf('Elapsed time for Post-Processing:%s\n',(datestr(datenum(0,0,0,0,0,toc),'HH:MM:SS')))
-%     fprintf('Post-Processing Completed ✅\n');
+%% Design Problem Mesh
+    Func10_DesignproblemMesh(fem,opt,inputs); 
+    fprintf('Elapsed time for Design Problem Mesh:%s\n',(datestr(datenum(0,0,0,0,0,toc),'HH:MM:SS')))
+    fprintf('Design Problem Mesh Completed ✅\n');
