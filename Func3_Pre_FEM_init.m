@@ -35,8 +35,9 @@ function [fem]    = Func3_Pre_FEM_init(inputs,mesh)
     right_ind   = find(abs(fem.X(:,1)-(+390))<1e-6);                            % right boundary setting
     top_ind     = find(abs(fem.X(:,2)-(+0))<1e-6);                              % top boundary setting         
     bottom_ind  = find(abs(fem.X(:,2)-(+250))<1e-6);                            % buttom boundary setting
-    fem.bcdof   = unique([left_ind; right_ind; top_ind; bottom_ind]);           % BC node          
-    fem.bcval   = zeros(length(fem.bcdof),1);                                   % BC node value = 0
+    fem.bcdof   = unique([left_ind; right_ind; top_ind; bottom_ind]);           % BC node  
+    % fem.bcdof   = unique([left_ind; top_ind; bottom_ind]);           % BC node 
+    fem.bcval   = zeros(length(fem.bcdof),1);                                 % BC node value = 0
 %% Setting up the current in coil-1 domain
     fem.ncoil1 = [];
     for e = 1:size(mesh.IX, 1)
