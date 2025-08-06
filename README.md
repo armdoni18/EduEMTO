@@ -107,3 +107,19 @@ In the file **Func3_Pre_FEM_init.m**, the boundary conditions are set manually b
     - Main_node_EM_TO.m
     
     The optimization will begin. Plots will be automatically saved in **Figures/** at each iteration.
+
+6. **Adjust Plotting Range in Func10_DesignproblemMesh.m (Optional Visualization Step)**
+
+   If you're using the provided function Func10_DesignproblemMesh.m to visualize the geometry and mesh layout, **make sure to adjust the axis range according to your mesh type.**
+
+   - If using the **full model**, line 104 of the function becomes:
+    ```
+    axis equal; axis([0 390 0 250]);
+    ```
+    The value 390 is used for the **full model**, which only includes the full horizontal geometry.
+   
+    - If using the **half model**, update the line to:
+    ```
+    axis equal; axis([0 390/2 0 250]);
+    ```
+    This update ensures that the half geometry is correctly visualized during plotting. The vertical range (0 to 250) remains the same for both models.
